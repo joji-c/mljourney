@@ -1,0 +1,32 @@
+all data is stored as binary values
+iteration is a slow process 
+
+we do not use list in numerical calculations as
+    for list=[3]
+list is saved as:
+    type      00000000 00000000 00000000 00000001
+    size      00000000 00000000 00000000 10000001
+    obj value 00000000 00000000 00000000 00000011
+this will make the size of list more and the speed at which it can be accesed is slower
+
+so we use numpy(numerical pyhton) array instead: 
+numpy(numerical pyhton) always have the same type of data
+            arr=numpy.array([3])
+            int16
+it is saved as 00000000 00000011
+
+data: num of rows and columns
+numpy(numerical pyhton): library for processing this data
+applications: ML,pandas,scikit
+numpy has amny methods like array,zeros,ones,full
+
+to check the dimension of a variable we use   -> var_name.ndim
+to get the num of values in a variable we use -> var_name.size
+to get the num of rows and columns of the given array we use    -> var_name.shape
+
+we slice in 1d array using -> arr[start:end]   #end excluded     so 1:4   will give values of 1-3 only not 4
+we slice in 2d array using -> arr[row:column]
+row --->  column|
+                |
+                v    
+in (2,3) means 2 rows and 3 columns
