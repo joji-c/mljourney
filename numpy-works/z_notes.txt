@@ -18,7 +18,7 @@ it is saved as 00000000 00000011
 data: num of rows and columns
 numpy(numerical pyhton): library for processing this data
 applications: ML,pandas,scikit
-numpy has amny methods like array,zeros,ones,full
+numpy has many methods like array,zeros,ones,full,randon to make arrays
 
 to check the dimension of a variable we use                  -> var_name.ndim
 to get the num of values in a variable we use                -> var_name.size
@@ -31,7 +31,9 @@ row --->  column|
                 v    
 in (2,3) means 2 rows and 3 columns
 to update  -> arr[row,column]=new_value
-numpy has sum,max,min,avg as build in functions
+numpy has sum,max,argmax,min,avg,median,count_zero as build in functions
 we use axis to show weathehr touse row or column
     axis=0 -> column
     axis=1 -> row
+
+in 3d or multi dimention we have -> [level,row,column]
