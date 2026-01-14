@@ -22,8 +22,8 @@ to check the dimension of a variable we use                  -> var_name.ndim
 to get the num of values in a variable we use                -> var_name.size
 to get the num of rows and columns of the given array we use -> var_name.shape
 1d array using                  -> arr[start:end]   #end excluded so 1:4 will give values of 1-3 only not 4
-in 2d array using               -> arr[row,column]
-in 3d or multi dimention we use -> arr[level,row,column]
+2d array using                  -> arr[row,column]
+3d or multi-d array using       -> arr[level,row,column]
 row --->  column|
                 |
                 v    
@@ -36,6 +36,7 @@ we can +,-,/,* all the array values -> new_array = array_name (+,-,/,*) value
 if we use math_symbol on two diff arrays the values in same index will be the solution of the given math operation 
 when giving a condition use array_name[array_name condition value] if not the answer will come out in boolean values 
 we use & symbol instead of and 
+we use .astype to change a datatype
 
 numpy has build in functions:
     sum                             -> np.sum(array_name,axis= 0/1)
@@ -43,14 +44,22 @@ numpy has build in functions:
     argmax                          -> np.argmax(array_name)
     min                             -> np.min(array_name)
     argmin                          -> np.argmin(array_name)
+    zeros                           -> np.zeros((row,column),dtype="int")   as its in float as default
+    ones                            -> np.ones((row,column),dtype="int")   as its in float as default
+    full given val                  -> np.full((row,column),give a val to fill)
+    eye                             -> np.eye(row,column)   create zero matrix and fill ones in x,x locations
     avgerage                        -> np.average(array_name,axis= 0/1)
     random                          -> np.random.rand(row,column)
     random int                      -> np.random.randint(low,high,shape=(row,column))
     count_nonzero                   -> np.count_nonzero(array_name==value,axis= 0/1)
-    where                           -> np.where(condition)
+    where                           -> np.where(condition,true_val_replace,false_val_replace)
     vertical stacking               -> np.vstack(arr1,arr2)   
     horizontal stacking             -> np.hstack(arr1,arr2)
     reshape                         -> np.reshape(array_name,shape=(row,column))          should be similar shape 
+    flatten                         -> np.ravel(arr)   or  arr.flatten()
+    matrix *                        -> np.dot(arr1,arr2)
+    read csv file                   ->np.loadtxt(file_path,delimiter=",",skiprow=1,dtype="str")
+
 
 
 

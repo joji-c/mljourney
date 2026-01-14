@@ -1,6 +1,6 @@
 import numpy as np
 # np.loadtxt(file_path,delimeter,skip_rows,dtype)
-data=np.loadtxt("sales-data\sales.csv",delimiter=",",skiprows=1,dtype="str")
+data=np.loadtxt("numpy-works\\sales\\sales.csv",delimiter=",",skiprows=1,dtype="str")
 print(data)
 # total units sold
 units_sold=data[:,3].astype("int")
