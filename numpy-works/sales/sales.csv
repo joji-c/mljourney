@@ -1,0 +1,11 @@
+date,product,category,units_sold,price,region
+2025-01-01,Laptop,Electronics,5,55000,South
+2025-01-01,Mobile,Electronics,12,20000,North
+2025-01-02,Tablet,Electronics,7,30000,East
+2025-01-02,Chair,Furniture,10,3500,West
+2025-01-03,Desk,Furniture,4,8000,South
+2025-01-03,Mobile,Electronics,15,21000,North
+2025-01-04,Laptop,Electronics,3,56000,East
+2025-01-04,Chair,Furniture,8,3600,West
+2025-01-05,Desk,Furniture,6,8200,South
+2025-01-05,Tablet,Electronics,9,31000,North
