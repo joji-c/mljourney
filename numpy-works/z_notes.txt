@@ -58,8 +58,9 @@ numpy has build in functions:
     reshape                         -> np.reshape(array_name,shape=(row,column))          should be similar shape 
     flatten                         -> np.ravel(arr)   or  arr.flatten()
     matrix *                        -> np.dot(arr1,arr2)
-    read csv file                   ->np.loadtxt(file_path,delimiter=",",skiprow=1,dtype="str")
-
+    read csv file                   -> np.loadtxt(file_path,delimiter=",",skiprow=1,dtype="str")
+    sort                            -> np.argsort(arr)
+    
 
 
 

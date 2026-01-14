@@ -1,5 +1,5 @@
 import numpy as np
-data = np.genfromtxt("titanic-case-study\\passenger_data.csv",delimiter=",",skip_header=1,filling_values=0,dtype="str")
+data = np.genfromtxt("numpy-works\\passenger\\passenger_data.csv",delimiter=",",skip_header=1,filling_values=0,dtype="str")
 # loadtxt gives error for null values in csv
 print(f"total number of passengers {data.shape}")
 # total no. of survivals
