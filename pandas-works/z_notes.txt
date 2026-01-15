@@ -7,16 +7,25 @@ pandas(paneldata is a python library used for data manipulation, cleaning and an
 we should remove the null values by adding elavant value or removing the entire record
 
 panda methods:
-    create a series                -> pd.Series(data,index=[a,b,c,d...])   # here index is default 0,1,2,3... can change if needed
+    create a series                -> pd.Series(data,index=[a,b,c,d...])     # here index is default 0,1,2,3... can change if needed
     data frame                     -> pd.DataFrame(data)
     DataFrame details              -> data.info()
     columns list                   -> data.columns
     first 5 series                 -> data.head()
     last 5 series                  -> data.tail()                
-    sum                            -> data.sum()
-    max                            -> data.max()
-    min                            -> data.min()
-    mean (average)                 -> data.mean()
-    mode (most frequent)
+    sum                            -> data[column].sum()
+    max                            -> data[column].max()
+    max index                      -> data[column].idxmax()
+    min                            -> data[column].min()
+    min index                      -> data[column].idxmin()
+    mean (average)                 -> data[column].mean()
+    mode (most frequent)           -> data[column].mode()     # if we add [0] we get only one of the most frequent
+    null check                     -> data.isnull()   #gives boolean val  
+    null count                     -> data.isnull().sum()     #gives column vice count of null
+    change null val                -> data[column].fillna(fill_value,inplace=true/false)     #true=save , false=save copy
+    remove null records            -> data.dropna(subset=[column],inplace=true)
+    get column value count         -> data[column].value_counts()
+    group by                       -> data.groupby(column)[value]
+    sort                           -> data.sort_values(by="column",ascending=true/false)     #true=asc , false=desc
+    record search by index         -> data.loc[index or column_name]     or     -> data.iloc[index only]
 
-    
