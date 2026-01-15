@@ -58,3 +58,10 @@ print(dt.loc[dt["price"].idxmax()])
 print(dt[dt["price"]==dt["price"].min()])
 print(dt.loc[dt["price"].idxmin()])
 
+#adding new column
+dt["revenue"] = dt["price"] * dt["quantity"]
+print(dt)
+
+#select row and column
+print(dt.loc[0,["product","price"]])
+

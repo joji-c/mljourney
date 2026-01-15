@@ -27,5 +27,6 @@ panda methods:
     get column value count         -> data[column].value_counts()
     group by                       -> data.groupby(column)[value]
     sort                           -> data.sort_values(by="column",ascending=true/false)     #true=asc , false=desc
-    record search by index         -> data.loc[index or column_name]     or     -> data.iloc[index only]
+    record search by index         -> data.loc[index,[column_name]]     or     -> data.iloc[index only]
+
 
