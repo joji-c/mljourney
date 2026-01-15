@@ -2,7 +2,9 @@ pandas(paneldata is a python library used for data manipulation, cleaning and an
     pandas features: fast data handling, efficient data filtering, handling missing values,aggregation, file support
     two data structures
     -> series - like 1d array or g-sheet with one column. can hold any type of value
-    -> dataframe - multiple columns
+    -> dataframe - multiple columns in a tabular format
+
+we should remove the null values by adding elavant value or removing the entire record
 
 panda methods:
     create a series                -> pd.Series(data,index=[a,b,c,d...])   # here index is default 0,1,2,3... can change if needed
@@ -14,6 +16,7 @@ panda methods:
     sum                            -> data.sum()
     max                            -> data.max()
     min                            -> data.min()
-    mean                           -> data.mean()
+    mean (average)                 -> data.mean()
+    mode (most frequent)
 
     

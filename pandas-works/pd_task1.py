@@ -23,8 +23,12 @@ sales = [
 ]
 
 data=pd.DataFrame(sales)
+print(data.shape)
+print(data.columns)
+print(data.head())
+print(data.tail())
+print(data.info())
 print(data[data["category"]=="Electronics"])
-print(data["price"].mean())
+print(data["price"].max())
 print(data[data["price"]>data["price"].mean()])
 print(data[["quantity","revenue"]])
-print(data.tail())
