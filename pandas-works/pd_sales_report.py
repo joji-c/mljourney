@@ -20,8 +20,6 @@ print(dt.head())
 print(dt.tail())
 print(dt.isnull().sum())
 
-print(dt[(dt["category"]=="Electronics") & (dt["quantity"]>2)])
-
 #how to add values to null spaces
 dt["date"].fillna(dt["date"].mode()[0],inplace=True)
 dt["product"].fillna("unknown",inplace=True)
@@ -31,6 +29,9 @@ dt["price"].fillna(dt["price"].mean(),inplace=True)
 dt["salesperson"].fillna(dt["salesperson"].mode()[0],inplace=True)
 print(dt)
 print(dt.isnull().sum())
+
+#filtering
+print(dt[(dt["category"]=="Electronics") & (dt["quantity"]>2)])
 
 #remove null value rows
 dt.dropna(subset=["category"],inplace=True)

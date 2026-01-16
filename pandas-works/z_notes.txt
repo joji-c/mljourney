@@ -7,6 +7,8 @@ pandas(paneldata is a python library used for data manipulation, cleaning and an
 we should remove the null values by adding elavant value or removing the entire record
 
 panda methods:
+    read a csv file                -> pd.read_csv("file_path")
+    read a exel file               -> pd.read_exel("file_path")
     create a series                -> pd.Series(data,index=[a,b,c,d...])     # here index is default 0,1,2,3... can change if needed
     data frame                     -> pd.DataFrame(data)
     DataFrame details              -> data.info()
@@ -20,13 +22,18 @@ panda methods:
     min index                      -> data[column].idxmin()
     mean (average)                 -> data[column].mean()
     mode (most frequent)           -> data[column].mode()     # if we add [0] we get only one of the most frequent
+    median                         -> data[column].median()     # after sorting the middle value
+    count                          -> data[column].count()
     null check                     -> data.isnull()   #gives boolean val  
     null count                     -> data.isnull().sum()     #gives column vice count of null
     change null val                -> data[column].fillna(fill_value,inplace=true/false)     #true=save , false=save copy
     remove null records            -> data.dropna(subset=[column],inplace=true)
+    remove duplicate values        -> data.drop_duplicates()
     get column value count         -> data[column].value_counts()
     group by                       -> data.groupby(column)[value]
     sort                           -> data.sort_values(by="column",ascending=true/false)     #true=asc , false=desc
     record search by index         -> data.loc[index,[column_name]]     or     -> data.iloc[index only]
+    rename a column                -> data.rename(columns={"old_name":"new_name"},inplace=true)
+    change column data type        -> data[column]=data[column].astype("data_type")
 
 
