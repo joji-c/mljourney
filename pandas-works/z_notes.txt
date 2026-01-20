@@ -35,5 +35,6 @@ panda methods:
     record search by index         -> data.loc[index,[column_name]]     or     -> data.iloc[index only]
     rename a column                -> data.rename(columns={"old_name":"new_name"},inplace=true)
     change column data type        -> data[column]=data[column].astype("data_type")
-
-
+    to join 2 dataframes           -> data3 = pd.merge(data1,data2,left_on="column_name",right_on="column_name",how="inner")     #use just_on,if both tables have common column,joins=inner,left,right
+    to get only unique values      -> data[column].unique()
+    
