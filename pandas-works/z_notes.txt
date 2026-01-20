@@ -5,6 +5,7 @@ pandas(paneldata is a python library used for data manipulation, cleaning and an
     -> dataframe - multiple columns in a tabular format
 
 we should remove the null values by adding elavant value or removing the entire record
+we can use jupyter noted with extension of .ipynb(interactive python notebook) to do codes in seperate cells 
 
 panda methods:
     read a csv file                -> pd.read_csv("file_path")
@@ -31,10 +32,10 @@ panda methods:
     remove duplicate values        -> data.drop_duplicates()
     get column value count         -> data[column].value_counts()
     group by                       -> data.groupby(column)[value]
-    sort                           -> data.sort_values(by="column",ascending=true/false)     #true=asc , false=desc
+    sort                           -> data.sort_values(by="column",ascending=true/false)     #true=asc , false=desc    use sort_index for left side sort
     record search by index         -> data.loc[index,[column_name]]     or     -> data.iloc[index only]
     rename a column                -> data.rename(columns={"old_name":"new_name"},inplace=true)
     change column data type        -> data[column]=data[column].astype("data_type")
     to join 2 dataframes           -> data3 = pd.merge(data1,data2,left_on="column_name",right_on="column_name",how="inner")     #use just_on,if both tables have common column,joins=inner,left,right
-    to get only unique values      -> data[column].unique()
-    
+    to get only unique values      -> data[column].unique()     #here the dtype becomes that of an object
+    to add a if else condition     -> data[column].apply(lambda )
