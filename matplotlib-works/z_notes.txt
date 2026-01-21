@@ -1,0 +1,11 @@
+we use % sign to do terminal commands in jupyter notes
+we use pyplot from matplotlib ,it has methods loke plot and show for making graphs 
+we add a point or any symbol at the data point of the graph using marker="symbols" in plot method (".",",","^","o")
+to change line style using linestyle="" in plot method (dashed,dotted,dashdot,none,default="solid")
+to change line color we use color="" in plot method ("green","blue","or the colors hexadecimal value",etc any color)
+to change the lines thickness we use linewidth=1,2,3... in plot method
+we add title using plt.title("title_name") and use color,size and weight to edit the title
+
+we use plot function to get a line chart
+we use bar function to get a bar chart it needs (variable.index,variable.values)
+we use pie function to get pie chart it needs (variable,labels=variable.index)
