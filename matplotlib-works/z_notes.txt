@@ -1,11 +1,33 @@
 we use % sign to do terminal commands in jupyter notes
 we use pyplot from matplotlib ,it has methods loke plot and show for making graphs 
-we add a point or any symbol at the data point of the graph using marker="symbols" in plot method (".",",","^","o")
+we add a point or any symbol at the data point of the graph using marker="symbols" in plot method ("." , "," , "^" , "o")
 to change line style using linestyle="" in plot method (dashed,dotted,dashdot,none,default="solid")
 to change line color we use color="" in plot method ("green","blue","or the colors hexadecimal value",etc any color)
 to change the lines thickness we use linewidth=1,2,3... in plot method
 we add title using plt.title("title_name") and use color,size and weight to edit the title
+we use shadow = true/false to have a grapgh shadow effect or not
+we use autopct=%1.1f%%  to get percentage in pie chart
+we can add a label="label_name" in pie chart and show it by using plt.legend()
+histogram is used to group ranges
 
-we use plot function to get a line chart
-we use bar function to get a bar chart it needs (variable.index,variable.values)
-we use pie function to get pie chart it needs (variable,labels=variable.index)
+line chart    -> plt.plot(variable)
+bar chart     -> plt.bar(variable.index,variable.values)
+pie chart     -> plt.pie(variable,labels=variable.index)
+scatter chart -> plt.scatter(variable.index,variable.values)
+histogram     -> plt.hist(variable,bin=(any num),edgecolor=(any color))
+
+virtual env has all the extensions required to run a certain program
+insatll virtal env             -> pip install virtalenv
+creating a virtaul enviornment -> python -m virtualenv env_name     #end the name with 'env' to understand its a virtual env and -m means that it runs as a module
+to run or activate said env    -> env_name\scripts\activate
+or change from global env
+now install all the packages needed for this program into this env 
+to exit from virtual env       -> deactivate or close terminal
+to send this env to someone    -> pip freeze >requirements.txt
+
+we use line chart to see progress
+we use bar,pie in catogarical data  
+for distributional data we use histogram 
+when we have numbers in both axises we use scatter graph to find its correlation
+when we compare we use boxplot
+
