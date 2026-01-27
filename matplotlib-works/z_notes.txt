@@ -1,4 +1,5 @@
 we use % sign to do terminal commands in jupyter notes
+in reading a csv file if data seperated by   ;  instead of  ,  then we use delimiter=";"  within read_csv
 we use pyplot from matplotlib ,it has methods loke plot and show for making graphs 
 we add a point or any symbol at the data point of the graph using marker="symbols" in plot method ("." , "," , "^" , "o")
 to change line style using linestyle="" in plot method (dashed,dotted,dashdot,none,default="solid")
@@ -30,4 +31,7 @@ we use bar,pie in catogarical data
 for distributional data we use histogram 
 when we have numbers in both axises we use scatter graph to find its correlation
 when we compare we use boxplot
+
+correlation  -> df[[column1,column2,column3....]].corr()
+it show if one column increases the other increases if + corr or decreases if - corr
 
