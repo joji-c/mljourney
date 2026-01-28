@@ -1,0 +1,39 @@
+to find all seaborn available datasets  -> sns.get_dataset_names()
+to load a dataset from seaborn          -> sns.load_dataset("dataset_name")
+to create a line plot                   -> sns.lineplot(data=data_name,x="cloumn1",y="column2")
+to create a bar plot                    -> sns.barplot(data=data_name,x="cloumn1",y="column2")
+to create a scatter plot                -> sns.scatterplot(data=data_name,x="cloumn1",y="column2")
+to create a strip plot                  -> sns.stripplot(data=data_name,x="cloumn1",y="column2")
+to create a histogram                   -> sns.histplot(data=data,x="column1)
+to craete a regression line             -> sns.regplot(data=data_name,x="cloumn1",y="column2")
+to create a box plot                    -> sns.boxplot(data=data_name,x="cloumn1",y="column2")
+to create a violin plot                 -> sns.violinplot(data=data_name,x="cloumn1",y="column2")
+to create a kde plot                    -> sns.kdeplot(data=data_name,x=column1,fill=True)
+(kernal density estimator)
+to create a heatmap                     -> sns.heatmap(data_name[colums_with_integer_values].corr(),annot=True)
+
+we can use hue="column3" to filter the scatterplot using color
+we can use sns.despine() this will remove the right border of a chart or give left/bottom=True to remove only left/bottom side of the border
+we can add a background color and grid  -> sns.set_style("color")    color=[white,whitegrid,dark,darkgrid]
+we can change font size using           -> sns.set_context("value")  value=['paper','notebook','talk','poster']
+we can add palette using palette="val" ,val=[bright,pastel,dark,muted,deep,colorblind]
+we can change grapgh color using color="color_name"
+we can change the barplot from taking avg as default and change it using estimator=np.sum/mean/mode     here np is numpy
+we use split=true to make the violinplot have one image for hue instead of seperate image
+we can use correleation only on integer values and can use heatmap to express this data
+
+ 
+ in a box plot                o
+                          ----------        -> this is max value
+                              |
+                              |
+                          ----------        -> this is 75% value
+                          |        |
+                          ----------        -> this is 50% value 
+                          |        |
+                          ----------        -> this is 25% value
+                              |
+                              |
+                          ----------        -> this is min value
+                              o             -> this is a outlier
+
