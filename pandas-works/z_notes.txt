@@ -10,6 +10,7 @@ we can use jupyter noted with extension of .ipynb(interactive python notebook) t
 panda methods:
     read a csv file                -> pd.read_csv("file_path")
     read a exel file               -> pd.read_exel("file_path")
+    drop a column                  -> data.drop(colums="column_name",inplace=True)
     create a series                -> pd.Series(data,index=[a,b,c,d...])     # here index is default 0,1,2,3... can change if needed
     data frame                     -> pd.DataFrame(data)
     DataFrame details              -> data.info()
