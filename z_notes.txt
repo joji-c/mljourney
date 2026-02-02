@@ -15,9 +15,31 @@ steps involved in ml:
 -> data collect
 -> data cleaned
 -> data analyse(eda)
--> feature engineering decide independant and dependant variable
+-> feature engineering decide independant(input or x) and dependant(output or y) variable and feature scaling
 -> split data into training data 80% and testing data 20%
--> select model training algorithm
+-> select ml algorithm
 -> train the model
 -> evaluate the model
 
+types of machine learning:
+-> supervised machine learning :- used when there are independant(input) and dependant(output) variable
+    -> classification :- output is a class 
+        ->KNN,naivebayes,sym,decisiontree,randomforest
+    -> regression :- output is numerical
+
+-> unsupervised machine learning :- used when we have independant(input) and groups/cluster(output)
+
+we use scikit-learn library to scale data and many other ml functions
+
+-> to scale all independant values
+from sklearn.preprocessing import MinMaxScaler/StandardScaler     -> this is how we import it
+and we should create an object for the class MinMaxScaler
+then    ->  scaler=MinMaxScaler()
+            xscaled=scaler.fit_transform(x)
+            xscaled
+
+->to train and test model
+from sklearn.model_selection import train_test_split       ->this is how we import it
+X_train,X_test,Y_train,Y_test=train_test_split(Xscaled,Y,test_size=0.2)
+
+->
