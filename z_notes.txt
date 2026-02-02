@@ -6,4 +6,18 @@ how to check duplicates       -> df[df["column_name"].duplicates].shape
 how to remove duplicates      -> df=df.drop_duplicates(subset=["column],keep="first")
 to save cleaned data          -> df.to_csv("new_empty_file_path")
 
-we can extract 
+machine learning :- a branch of ai, where computer learn from data and make prediction or decision with out being explicitly
+programmed for every case
+in ml we give both input and output of that input to traint he ml to leran and predict 
+
+steps involved in ml:
+-> data observe
+-> data collect
+-> data cleaned
+-> data analyse(eda)
+-> feature engineering decide independant and dependant variable
+-> split data into training data 80% and testing data 20%
+-> select model training algorithm
+-> train the model
+-> evaluate the model
+
