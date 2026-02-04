@@ -26,7 +26,7 @@ steps involved in ml:
 types of machine learning:
 -> supervised machine learning :- used when there are independant(input) and dependant(output) variable
     -> classification :- output is a class 
-        ->KNN,naivebayes,sym,decisiontree,randomforest
+        ->KNN(KnearestNeighbour),naivebayes,sym,decisiontree,randomforest
     -> regression :- output is numerical
 -> unsupervised machine learning :- used when we have independant(input) and groups/cluster(output)
 
@@ -49,7 +49,8 @@ then    ->  scaler=MinMaxScaler()
 
 -> to train and test model
 from sklearn.model_selection import train_test_split       -> this is how we import it
-X_train,X_test,Y_train,Y_test=train_test_split(Xscaled,Y,test_size=0.2)
+X_train,X_test,Y_train,Y_test=train_test_split(Xscaled,Y,test_size=0.2,random_state=anynum)     
+#random_state makes sure that the test and train values are same every time we refresh and the num should be the same to get the same values
 
 -> to change or add all null values at Once instead of fillna
 from sklearn.impute import SimpleImputer     -> this is how we import it
