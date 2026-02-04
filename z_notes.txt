@@ -2,7 +2,7 @@ data cleaning (fixing null values, changing date to hr and min etc)
 eda -> exploratory data analysis (findings found from cleaned sata)
 featureEngineering -> up/down sampling,smote,label encoding for ml
 
-how to check duplicates       -> df[df["column_name"].duplicates].shape
+how to check duplicates       -> df[df["column_name"].duplicated].shape
 how to remove duplicates      -> df=df.drop_duplicates(subset=["column],keep="first")
 to save cleaned data          -> df.to_csv("new_empty_file_path")
 
