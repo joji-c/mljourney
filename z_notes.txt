@@ -41,7 +41,7 @@ types of machine learning:
 we use scikit-learn library to scale data and many other ml functions
 
 -> to scale all independant values
-from sklearn.preprocessing import MinMaxScaler/StandardScaler     -> this is how we import it
+from sklearn.preprocessing import MinMaxScaler(uses min and max)/StandardScaler(uses mean and standard deviation)    -> this is how we import it
 and we should create an object for the class MinMaxScaler
 then    ->  scaler=MinMaxScaler()
             xscaled=scaler.fit_transform(x)
@@ -67,4 +67,18 @@ X=pd.DataFrame(ct.fit_transform(X))
 from sklearn.preprocessing import LabelEncoder
 le=LabelEncoder()
 Y=le.fit_transform(Y)
+
+KNN :- KnearestNeighbour:                                   
+give a value for K      (value should always be odd number)
+calculate the distance ( we use ucledian formulla  -> (x2-x1)^2 + (y2-y1)^1 )
+sort the data
+find the nearest neighbour
+make a prediction
+
+eg: k=3
+00000000000                 111111111                    0000    |                  |    111
+0000000                        111111      sort  ->      0000000 |                  | 111111
+00000000           *        111111111            ->      00000000|        *       11|1111111
+0000                              111                    00000000|000            111|1111111
+here * has more closer values in 1s group than 0s so * == 1
 
