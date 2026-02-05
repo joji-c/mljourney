@@ -70,7 +70,7 @@ Y=le.fit_transform(Y)
 
 KNN :- KnearestNeighbour:                                   
 give a value for K      (value should always be odd number)
-calculate the distance ( we use ucledian formulla  -> (x2-x1)^2 + (y2-y1)^1 )
+calculate the distance ( we use eucledean formulla  -> root of (x2-x1)^2 + (y2-y1)^2 )
 sort the data
 find the nearest neighbour
 make a prediction
@@ -81,4 +81,9 @@ eg: k=3
 00000000           *        111111111            ->      00000000|        *       11|1111111
 0000                              111                    00000000|000            111|1111111
 here * has more closer values in 1s group than 0s so * == 1
+
+-> how to train a model in KNN:
+from sklearn.neighbors import KNeighborsClassifier
+knn=KNeighborsClassifier(n_neighbors=3)
+knn.fit(X_train,Y_train)
 
