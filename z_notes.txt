@@ -38,21 +38,8 @@ types of machine learning:
                 france         after encoding with   ->    0          0          1                
                 america           OneHotEncoding           0          1          0
 
-we use scikit-learn library to scale data and many other ml functions
 
--> to scale all independant values
-from sklearn.preprocessing import StandardScaler(uses mean and standard deviation)/MinMaxScaler(uses min and max)   -> this is how we import it
-and we should create an object for the class StandardScaler
-then    ->  scaler=StandardScaler()
-            X_train=scaler.fit_transform(X_train)
-            X_test=scaler.fit_transform(X_test)
-            X_train
-
--> to train and test model
-from sklearn.model_selection import train_test_split       -> this is how we import it
-X_train,X_test,Y_train,Y_test=train_test_split(Xscaled,Y,test_size=0.2,random_state=anynum)     
-#random_state makes sure that the test and train values are same every time we refresh and the num should be the same to get the same values
-
+we use scikit-learn library to scale data and many other ml functions:
 -> to change or add all null values at Once instead of fillna
 from sklearn.impute import SimpleImputer     -> this is how we import it
 imputer=SimpleImputer(missing_values=np.nan,strategy="mean")           ->create object and strategy=mean,mode,min,max,median
@@ -69,27 +56,75 @@ from sklearn.preprocessing import LabelEncoder
 le=LabelEncoder()
 Y=le.fit_transform(Y)
 
-KNN :- KnearestNeighbour:   this model is used in categorical data                                
-give a value for K      (value should always be odd number)
-calculate the distance ( we use eucledean formulla  -> root of (x2-x1)^2 + (y2-y1)^2 )
-sort the data
-find the nearest neighbour
-make a prediction
+-> to split a data into train and test
+from sklearn.model_selection import train_test_split       -> this is how we import it
+X_train,X_test,Y_train,Y_test=train_test_split(Xscaled,Y,test_size=0.2,random_state=anynum)     
+#random_state makes sure that the test and train values are same every time we refresh and the num should be the same to get the same values
 
-eg: k=3
-00000000000                 111111111                    0000    |                  |    111
-0000000                        111111      sort  ->      0000000 |                  | 111111
-00000000           *        111111111            ->      00000000|        *       11|1111111
-0000                              111                    00000000|000            111|1111111
-here * has more closer values in 1s group than 0s so * == 1
+-> to scale all independant values
+from sklearn.preprocessing import StandardScaler(uses mean and standard deviation)/MinMaxScaler(uses min and max)   -> this is how we import it
+and we should create an object for the class StandardScaler
+then    ->  scaler=StandardScaler()
+            X_train=scaler.fit_transform(X_train)
+            X_test=scaler.fit_transform(X_test)
+            X_train
 
--> how to train a model in KNN:
-from sklearn.neighbors import KNeighborsClassifier
-knn=KNeighborsClassifier(n_neighbors=3)
-knn.fit(X_train,Y_train)
 
--> to find accuracy score
-Y_pred=knn.predict(X_test)
-from sklearn.metrics import accuracy_score
-print(accuracy_score(Y_test,Y_pred)*100)
+-> KNN :- KnearestNeighbour:   this model is used in categorical data                                
+    give a value for K      (value should always be odd number)
+    calculate the distance ( we use eucledean formulla  -> root of (x2-x1)^2 + (y2-y1)^2 )
+    sort the data
+    find the nearest neighbour
+    make a prediction
+    eg: k=3
+    00000000000                 111111111                    0000    |                  |    111
+    0000000                        111111      sort  ->      0000000 |                  | 111111
+    00000000           *        111111111            ->      00000000|        *       11|1111111
+    0000                              111                    00000000|000            111|1111111
+    here * has more closer values in 1s group than 0s so * == 1
+    -> how to train a model in KNN:
+        from sklearn.neighbors import KNeighborsClassifier
+        knn=KNeighborsClassifier(n_neighbors=3)
+        knn.fit(X_train,Y_train)
+
+    -> to find accuracy score in KNN:
+        Y_pred=knn.predict(X_test)
+        from sklearn.metrics import accuracy_score
+        accuracy_score(Y_test,Y_pred)*100
+
+    -> to find confusion matrix in KNN:
+        from sklearn.metrics import ConfusionMatrixDisplay
+        ConfusionMatrixDisplay.from_predictions(y_test,y_pred)
+
+    -> to find precision ,recall anf f1score in KNN:
+        from sklearn.metrics import precision_score,recall_score,f1_score
+        print("precision_score :",precision_score(y_test,y_pred))
+        print("recall_score :",recall_score(y_test,y_pred))
+        print("f1_score :",f1_score(y_test,y_pred))
+ 
+    ->if the dependant column y has more than 2 class then use:
+        from sklearn.metrics import classification_report
+        print(classification_report(y_test,y_pred)) 
+
+
+-> we use many methods to evaluate a model:
+there are four types of predicted values in a model:
+TP : TruePositive observation predicts Positive then its True      1 => 1    ->   TP
+TN : TrueNegative observation predict Negative then its True       0 => 0    ->   TN
+FP : FalsePositive observation predict Positive then its False     0 => 1    ->   FP
+FN : FalseNegative observation predict Negative then its False     1 => 0    ->   FN
+if the value of FP,FN are high then that model is not usable 
+    -> accuracy score: here we only check TP and TN  but not FP and FN values
+        accuracy_score = TP + TN / Total_pred(TP+TN+FP+FN)
+    -> confusion matrix: here we get a heatmap of TP,TN,FP,FN:
+             -------------------------------
+          0  |  TN  (0->0)  |  FP  (0->1)  |
+             -------------------------------
+          1  |  FN  (1->0)  |  TP  (1->1)  |
+             -------------------------------
+                    0               1
+    -> precision: TP / (TP + FP)
+    -> recall: TP / (TP + FN)
+    -> f1Score: (2*precision*recall) / (precision + recall)
+    note: for a successful model all these values should be above 75%
 
