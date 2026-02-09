@@ -59,11 +59,4 @@ if the value of FP,FN are high then that model is not usable
     -> f1Score: (2*precision*recall) / (precision + recall)
     note: for a successful model all these values should be above 75%
 
-probability: a way to measure how likely something to happen
-probability = favarouble outcome / total outcome
-eg:- coin toss[head,tail]
-        probability of head is 1/2
-
-    die roll[1,2,3,4,5,6]
-        probability of 2 is 1/6
 
