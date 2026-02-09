@@ -14,6 +14,45 @@
     p(B) -> probability of t = 2/5
         p(A/B) -> probability of D from p(B) = 1/2
 
-p(A/B) = ( p(B/A) * p(A) ) / p(B)
-p(B/A) = ( p(A/B) * p(B) ) / p(A)
+->probability theoram: 
+    p(A/B) = ( p(B/A) * p(A) ) / p(B)  -> Bayes probability
+    p(B/A) = ( p(A/B) * p(B) ) / p(A)  ->      theoram
+in this equation:
 
+eg:- 
+her we have walkers and drivers according to thier age and salary:
+s|* * *                 o
+a|* * * |*        |   o o
+l|* *   |    []  o| o o o
+a|*     |         |     o
+r|* * * |* *      |   o o                * = 10
+y|* *                   o                o = 20
+  -------------------------
+             age  
+x= value from age and salary
+p( going to change / already changed ) = ( likelyhood * priorprobability ) / marginal likelyhood
+priorprobability = total num of priorprobability_value / total priorprobability
+marginal likelyhood = some body exhibits similar features to X(A or B) 
+likely = A or B only chance from marginal likelyhood
+
+here we need to calculate:
+p(walkers/x) = (p(x/walkers) * p(walkers))/p(x)
+priorprobability = 1/3
+marginal likelyhood = 4/30
+likelyhood = 3/10
+p(walkers/x) = ((3/10) * (1/3)) / (4/30)  = 0.75
+
+p(drivers/x) = (p(x/drivers) * p(drivers))/p(x)
+priorprobability = 2/3
+marginal likelyhood = 4/30
+likelyhood = 1/20
+p(walkers/x) = ((1/20) * (2/3)) / (4/30)  = 0.25
+
+thus [] has a higher chnce to be a walker than a drivers
+
+-> make a model using naive_bayes
+    from sklearn.naive_bayes import GaussianNB
+    gb=GaussianNB()
+    gb.fit(x_train,y_train)
+
+    y_pred=gb.predict(x_test)

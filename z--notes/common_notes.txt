@@ -59,4 +59,21 @@ if the value of FP,FN are high then that model is not usable
     -> f1Score: (2*precision*recall) / (precision + recall)
     note: for a successful model all these values should be above 75%
 
+    -> to find accuracy score:
+        from sklearn.metrics import accuracy_score
+        accuracy_score(Y_test,Y_pred)*100
+
+    -> to find confusion matrix:
+        from sklearn.metrics import ConfusionMatrixDisplay
+        ConfusionMatrixDisplay.from_predictions(y_test,y_pred)
+
+    -> to find precision ,recall anf f1score:
+        from sklearn.metrics import precision_score,recall_score,f1_score
+        print("precision_score :",precision_score(y_test,y_pred))
+        print("recall_score :",recall_score(y_test,y_pred))
+        print("f1_score :",f1_score(y_test,y_pred))
+ 
+    ->if the dependant column y has more than 2 class then use:
+        from sklearn.metrics import classification_report
+        print(classification_report(y_test,y_pred)) 
 
