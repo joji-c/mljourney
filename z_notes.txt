@@ -107,6 +107,8 @@ then    ->  scaler=StandardScaler()
         print(classification_report(y_test,y_pred)) 
 
 
+-> 
+
 -> we use many methods to evaluate a model:
 there are four types of predicted values in a model:
 TP : TruePositive observation predicts Positive then its True      1 => 1    ->   TP
