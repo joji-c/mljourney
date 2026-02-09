@@ -1,0 +1,69 @@
+data cleaning (fixing null values, changing date to hr and min etc)
+eda -> exploratory data analysis (findings found from cleaned sata)
+featureEngineering -> up/down sampling,smote,label encoding for ml
+
+how to check duplicates       -> df[df.duplicated()].shape
+how to remove duplicates      -> df=df.drop_duplicates(subset=["column],keep="first")
+to save cleaned data          -> df.to_csv("new_empty_file_path")
+
+machine learning :- a branch of ai, where computer learn from data and make prediction or decision with out being explicitly
+programmed for every case
+in ml we give both input and output of that input to traint he ml to leran and predict 
+
+steps involved in ml:
+-> data observe
+-> data collect
+-> data cleaned
+-> data analyse(eda)
+-> feature engineering decide independant(input/features/x) and dependant(output/y) variable 
+-> encoding data types of x and y 
+-> split data into training data 80% and testing data 20%
+-> feature scaling
+-> select ml algorithm
+-> train the model
+-> evaluate the model
+
+types of machine learning:
+-> supervised machine learning :- used when there are independant(input) and dependant(output) variable
+    -> classification :- output is a class 
+        ->KNN(KnearestNeighbour),naivebayes,sym,decisiontree,randomforest
+    -> regression :- output is numerical
+-> unsupervised machine learning :- used when we have independant(input) and groups/cluster(output)
+
+-> encoding types:
+    -> label encoding: help in changing the class into int in Y
+    -> OneHotEncoding: each class will craete a new column and the one with the value in it will be 1 and everyone else be 0 in X
+        eg:-    country                                  india     america    france
+                india                                      1          0          0
+                france         after encoding with   ->    0          0          1                
+                america           OneHotEncoding           0          1          0
+
+-> we use many methods to evaluate a model:
+there are four types of predicted values in a model:
+TP : TruePositive observation predicts Positive then its True      1 => 1    ->   TP
+TN : TrueNegative observation predict Negative then its True       0 => 0    ->   TN
+FP : FalsePositive observation predict Positive then its False     0 => 1    ->   FP
+FN : FalseNegative observation predict Negative then its False     1 => 0    ->   FN
+if the value of FP,FN are high then that model is not usable 
+    -> accuracy score: here we only check TP and TN  but not FP and FN values
+        accuracy_score = TP + TN / Total_pred(TP+TN+FP+FN)
+    -> confusion matrix: here we get a heatmap of TP,TN,FP,FN:
+             -------------------------------
+          0  |  TN  (0->0)  |  FP  (0->1)  |
+             -------------------------------
+          1  |  FN  (1->0)  |  TP  (1->1)  |
+             -------------------------------
+                    0               1
+    -> precision: TP / (TP + FP)
+    -> recall: TP / (TP + FN)
+    -> f1Score: (2*precision*recall) / (precision + recall)
+    note: for a successful model all these values should be above 75%
+
+probability: a way to measure how likely something to happen
+probability = favarouble outcome / total outcome
+eg:- coin toss[head,tail]
+        probability of head is 1/2
+
+    die roll[1,2,3,4,5,6]
+        probability of 2 is 1/6
+
