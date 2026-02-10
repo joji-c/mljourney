@@ -19,12 +19,12 @@
     p(B/A) = ( p(A/B) * p(B) ) / p(A)  ->      theoram
 eg:- 
 her we have walkers and drivers according to thier age and salary:
-s|* * *                 o
+s|* * *                o
 a|* * * |*       |   o o
 l|* *   |   []  o| o o o
 a|*     |        |     o
 r|* * * |* *     |   o o                * = 10
-y|* *                   o                o = 20
+y|* *                  o                o = 20
   -------------------------
              age  
 x= value from age and salary
