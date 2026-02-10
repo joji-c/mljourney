@@ -49,7 +49,7 @@ p(walkers/x) = ((1/20) * (2/3)) / (4/30)  = 0.25
 thus [] has a higher chnce to be a walker than a drivers
 
 
--> make a model using naive_bayes
+-> make a model using naive_bayes:
     from sklearn.naive_bayes import GaussianNB
     gb=GaussianNB()
     gb.fit(x_train,y_train)
