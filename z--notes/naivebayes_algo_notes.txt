@@ -28,7 +28,7 @@ y|* *                   o                o = 20
   -------------------------
              age  
 x= value from age and salary
-p( going to change / already changed ) = ( likelyhood * priorprobability ) / marginal likelyhood
+p( going to change / already changed ) = ( likelyhood * priorprobability ) / (marginal likelyhood)
 priorprobability = total num of priorprobability_value / total priorprobability
 marginal likelyhood = some body exhibits similar features to X(A or B) 
 likely = A or B only chance from marginal likelyhood
