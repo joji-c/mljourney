@@ -28,6 +28,7 @@ types of machine learning:
     -> classification :- output is a class 
         ->KNN(KnearestNeighbour),naivebayes,sym,decisiontree,randomforest
     -> regression :- output is numerical
+        ->decisiontree
 -> unsupervised machine learning :- used when we have independant(input) and groups/cluster(output)
 
 -> encoding types:
