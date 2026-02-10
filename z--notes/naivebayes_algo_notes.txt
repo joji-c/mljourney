@@ -17,8 +17,6 @@
 ->probability theoram: 
     p(A/B) = ( p(B/A) * p(A) ) / p(B)  -> Bayes probability
     p(B/A) = ( p(A/B) * p(B) ) / p(A)  ->      theoram
-in this equation:
-
 eg:- 
 her we have walkers and drivers according to thier age and salary:
 s|* * *                 o
@@ -50,9 +48,11 @@ p(walkers/x) = ((1/20) * (2/3)) / (4/30)  = 0.25
 
 thus [] has a higher chnce to be a walker than a drivers
 
+
 -> make a model using naive_bayes
     from sklearn.naive_bayes import GaussianNB
     gb=GaussianNB()
     gb.fit(x_train,y_train)
 
     y_pred=gb.predict(x_test)
+
