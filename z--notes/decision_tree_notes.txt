@@ -41,6 +41,5 @@ eg:-
         weighted entropy = (5/10)*0.58 + (5/10)*0.434 = 0.507
         IG = 0.971 - 0.507 = 0.464
 
-    step 4: take node with highest IG:
-        credit_score has higher IG 
+    result: node with highest IG -> credit_score
 
