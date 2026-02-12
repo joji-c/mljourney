@@ -1,1 +1,46 @@
 decision tree  CART(classification and regression tree):
+
+formulas:
+p = (+ve_val or -ve_val) / (+ve_val + -ve_val)
+entropy (E) = -Plog2P
+    -> E = - (p+)log2(p+) - (p-)log2(p-)
+weighted entropy =  ( (p in yes) / (p in yes + p in no) ) * E(yes)  +
+                    ( (p in no) / (p in yes + p in no) ) * E(no) 
+IG = E(parent) - weighted entropy
+
+eg:-
+    credit_score | job_stable |   loan   |
+        yes      |    yes     | approved |
+        yes      |    yes     | approved |
+        yes      |    yes     | approved |
+        yes      |    no      | approved |
+        yes      |    no      | rejected |
+        no       |    yes     | rejected |
+        no       |    yes     | rejected |
+        no       |    no      | rejected |
+        no       |    no      | rejected |
+        no       |    no      | rejected |
+
+    step 1: entropy of loan:
+        loan -> 4A | 6R
+        E(loan) = -(4/10)log2(4/10) - (6/10)log2(6/10) = 0.971
+
+    step 2: entropy of credit_score:
+        credit_score---> yes -> 4A | 1R
+                    ---> no  -> 0A | 5R
+        E(yes) = -(4/5)log2(4/5) - (1/5)log2(1/5)  = 0.721
+        E(no)  = -(0/5)log2(0/5) - (5/5)log2(5/5)  = 0
+        weighted entropy = (5/10)*0.721 + (5/10)*0 = 0.360
+        IG = 0.971 - 0.360 = 0.611
+
+    step 3: entropy of job_stable:
+        job_stable---> yes -> 3A | 2R
+                ---> no  -> 1A | 4R
+        E(yes) = -(3/5)log2(3/5) - (2/5)log2(2/5)  = 0.58
+        E(no)  = -(1/5)log2(1/5) - (4/5)log2(4/5)  = 0.434
+        weighted entropy = (5/10)*0.58 + (5/10)*0.434 = 0.507
+        IG = 0.971 - 0.507 = 0.464
+
+    step 4: take node with highest IG:
+        credit_score has higher IG 
+
