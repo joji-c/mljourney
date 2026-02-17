@@ -78,7 +78,7 @@ if the value of FP,FN are high then that model is not usable
         from sklearn.metrics import classification_report
         print(classification_report(y_test,y_pred)) 
 
--> smote : the data we get is usually imbalanced so we use smot to make dummy data and balance them before training said data
+-> smote(synthetic minority oversampling technique) : the data we get is usually imbalanced so we use smot to make dummy data and balance them before training said data
     from imblearn.over_sampling import SMOTE
     sm = SMOTE(random_state=42)
     x_train_smote,y_train_smote = sm.fit_resample(x_train,y_train)
