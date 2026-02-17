@@ -3,7 +3,7 @@ eda -> exploratory data analysis (findings found from cleaned sata)
 featureEngineering -> up/down sampling,smote,label encoding for ml
 
 how to check duplicates       -> df[df.duplicated()].shape
-how to remove duplicates      -> df=df.drop_duplicates(subset=["column],keep="first")
+how to remove duplicates      -> df=df.drop_duplicates(subset=["column"],keep="first")
 to save cleaned data          -> df.to_csv("new_empty_file_path")
 
 machine learning :- a branch of ai, where computer learn from data and make prediction or decision with out being explicitly
@@ -97,6 +97,15 @@ if the value of FP,FN are high then that model is not usable
         print("accuracy_score",accuracy_score(y_test,y_pred)*100)
         print("f1_score",f1_score(y_test,y_pred)*100)
 
-ensamble machine learning model : 
-here we split the dataset into subsets(odd numbers) and each subset will have their own model and each model predidicts the output using the 
-same data and take the highest voting as the final output
+ensamble machine learning model : combination of multiple models
+we use 2 techniques:
+    -> bagging
+    -> boosting
+
+-> bagging : (bootstrapping nad aggregating)
+    here we split the dataset into subsets(odd numbers) and each subset will have their own model and each model predidicts 
+    the output using the same data and take the highest voting as the final output 
+    here the splitting of data is called bootstrapping
+    and the fusing of model values is called aggregating
+
+we use sklearn.ensamble.randomforestclassifier for ensamble

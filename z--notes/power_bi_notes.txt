@@ -1,7 +1,7 @@
-Power Bi -> used for data visualization
+Power BI -> used for data visualization
+looker studio -> googles visualization tool
 
-
--> advantages of power bi:- intoduced in 2015
+-> advantages of Power BI:- intoduced in 2015
     a microsoft product 
     easy compatability
     easily affordable
@@ -10,3 +10,4 @@ Power Bi -> used for data visualization
     ai features
     high level data security
     data analysis expression (DAX) is a language in power bi for advanced data analysis
+
