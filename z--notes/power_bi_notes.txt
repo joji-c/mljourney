@@ -1,13 +1,25 @@
-Power BI -> used for data visualization
+-> Power BI : used for data visualization intoduced in 2015
+    -> advantages of Power BI:-
+        a microsoft product 
+        easy compatability
+        easily affordable
+        user friendly interface
+        large community support
+        ai features
+        high level data security
+        data analysis expression (DAX) is a language in power bi for advanced data analysis
+
 looker studio -> googles visualization tool
 
--> advantages of Power BI:- intoduced in 2015
-    a microsoft product 
-    easy compatability
-    easily affordable
-    user friendly interface
-    large community support
-    ai features
-    high level data security
-    data analysis expression (DAX) is a language in power bi for advanced data analysis
+Power BI types:-
+    we use Power BI desktop version (only supports in windows machines) , its used to generate reports 
+    power bi service is used to share reports to other devices of different os like linus and apple , we use app.powerbi.com to use powerbi service in desktop
+    powerbi mobile apps in mobiles can only read reports not edit them
+    powerbi gateway
+    powerbi report server
+
+type of powerbi view: 
+    report view 
+    table view(data view)
+    model view(relationship view)
 
