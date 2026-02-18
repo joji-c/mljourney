@@ -2,7 +2,7 @@
     -> advantages of Power BI:-
         a microsoft product 
         easy compatability
-        easily affordable
+        affordable cost
         user friendly interface
         large community support
         ai features
@@ -22,4 +22,23 @@ type of powerbi view:
     report view 
     table view(data view)
     model view(relationship view)
+    DAX query review
+    TMDL view
 
+type of panels : data panel, build panel, format panel
+diff types of data : excel, csv, json, xml, oracle
+
+to copy               - ctrl+c
+to paste              - ctrl+v
+to make table         - ctrl+t 
+
+    name    age    day                 column ---> 3
+    a       1      sunday              row    ---> 4
+    b       2      monday
+    c       3      tuesday       
+    d       4      wednesday   
+
+data type : the way a data is stored
+data format : how data looks
+types of data types in excel : text,whole number,decimal number,date and time,date,time,boolean 
+ 
