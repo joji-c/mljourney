@@ -101,6 +101,7 @@ ensamble machine learning model : combination of multiple models
 we use 2 techniques:
     -> bagging
     -> boosting
+    -> stacking
 
 -> bagging : (bootstrapping nad aggregating)
     here we split the dataset into subsets(odd numbers) and each subset will have their own model and each model predidicts 
