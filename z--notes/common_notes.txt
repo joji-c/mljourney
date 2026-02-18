@@ -110,7 +110,24 @@ we use 2 techniques:
     here the splitting of data is called bootstrapping
     and the fusing of model values is called aggregating
     we use sklearn.ensamble.randomforestclassifier for ensamble
+    ->  from sklearn.ensemble import RandomForestClassifier
+        rf=RandomForestClassifier(random_state=1)
+        rf.fit(x_train,y_train)
+        y_pred=rf.predict(x_test)
+        print("accuracy_score",accuracy_score(y_test,y_pred)*100)
+        #print("f1_score",f1_score(y_test,y_pred)*100)
 
 -> boosting : its a sequential process, in here we first test the orginal data then take the data that was wrong 
-and test that data and continue this process
+and test that data and continue this process .eg:- AdaBoostClassifier,GradientBoostingClassifier
+    ->  from sklearn.ensemble import AdaBoostClassifier,GradientBoostingClassifier
+        from xgboost import XGBClassifier
+        models=[AdaBoostClassifier,GradientBoostingClassifier,XGBClassifier]
+        for model in models:
+            md=model()
+            md.fit(x_train,y_train)
+            y_pred=md.predict(x_test)
+            print("===",model,"===")
+            print("accuracy_score",accuracy_score(y_test,y_pred)*100)
+            print("f1_score",f1_score(y_test,y_pred)*100)  
+
 
