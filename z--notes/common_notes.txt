@@ -104,10 +104,13 @@ we use 2 techniques:
     -> boosting
     -> stacking
 
--> bagging : (bootstrapping nad aggregating)
+-> bagging : (bootstrapping nad aggregating)  this is a parallel process
     here we split the dataset into subsets(odd numbers) and each subset will have their own model and each model predidicts 
     the output using the same data and take the highest voting as the final output 
     here the splitting of data is called bootstrapping
     and the fusing of model values is called aggregating
+    we use sklearn.ensamble.randomforestclassifier for ensamble
 
-we use sklearn.ensamble.randomforestclassifier for ensamble
+-> boosting : its a sequential process, in here we first test the orginal data then take the data that was wrong 
+and test that data and continue this process
+
