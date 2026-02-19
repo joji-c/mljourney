@@ -13,7 +13,8 @@ looker studio -> googles visualization tool
 
 Power BI types:-
     we use Power BI desktop version (only supports in windows machines) , its used to generate reports 
-    power bi service is used to share reports to other devices of different os like linus and apple , we use app.powerbi.com to use powerbi service in desktop
+    power bi service is used to share reports to other devices of different os like linus and apple 
+        we use app.powerbi.com to use powerbi service in desktop(pro/premium ver)
     powerbi mobile apps in mobiles can only read reports not edit them
     powerbi gateway
     powerbi report server
@@ -42,3 +43,14 @@ data type : the way a data is stored
 data format : how data looks
 types of data types in excel : text,whole number,decimal number,date and time,date,time,boolean 
  
+direct query mode: live data ,data not stored only a correction of data source is formed no need to refresh
+d2 mode: read live data directly accessable no memory space needed ,but slower than import mode and no powerbi features
+
+unique values: values not repeated more than once
+distinct values: mult values counted as one 
+
+-> visualization:
+    report view -> build pane -> clustered column chart
+    x axis -> grouping
+    y axis -> aggregation
+
