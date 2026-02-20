@@ -1,8 +1,0 @@
-virtual env has all the extensions required to run a certain program
-insatll virtal env             -> pip install virtalenv
-creating a virtaul enviornment -> python -m virtualenv env_name     #end the name with 'env' to understand its a virtual env and -m means that it runs as a module
-to run or activate said env    -> env_name\scripts\activate
-or change from global env
-now install all the packages needed for this program into this env 
-to exit from virtual env       -> deactivate or close terminal
-to send this env to someone    -> pip freeze >requirements.txt
