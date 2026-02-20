@@ -130,4 +130,18 @@ and test that data and continue this process .eg:- AdaBoostClassifier,GradientBo
             print("accuracy_score",accuracy_score(y_test,y_pred)*100)
             print("f1_score",f1_score(y_test,y_pred)*100)  
 
+-> fine tuning models:
+first give the parameters of a model to she best option from them
+eg: params = {
+        "n_neighbors":[3,5,7,9],
+        "weights":["uniform","distance"],
+        "algorithm":["auto","ball_tree","kd_tree","brute"]
+    }
+
+    from sklearn.model_selection import GridSearchCV
+    gs = GridSearchCV(model_variable,params,cv=10)
+    gs.fit(x_train,y_train)
+    gs.best_params_
+
+here cv is cross verification
 
