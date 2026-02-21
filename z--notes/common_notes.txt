@@ -139,11 +139,9 @@ eg: params = {
     }
 
     from sklearn.model_selection import GridSearchCV
-    gs = GridSearchCV(model_variable,params,cv=10)
+    gs = GridSearchCV(model_variable,params,cv=10)                     # here cv is cross verification
     gs.fit(x_train,y_train)
     gs.best_params_
-
-here cv is cross verification
 
 Regression model:
 here we make a regression line using data and check all new data with that regression line to predict outcome 
