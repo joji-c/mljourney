@@ -146,7 +146,20 @@ eg: params = {
 Regression model:
 here we make a regression line using data and check all new data with that regression line to predict outcome 
 and we take multiple regression lines and the line with the least error is taken as  the best fit line
-simple linear regression -> y=mx + c           
-                            m = (y2 - y1) / (x2 - x1) 
+simple linear regression -> y = mx + c           
+                            m = (y2 - y1) / (x2 - x1)     (coeficient)
                             c = y intercept   (the point in y-axis that the regression line touches when extended)
+multiple linear regression : y = c + m1x1 + m2x2 + ... mnxn
+
+-> regression model evaluation methods:
+    r2_score -> RSS/TSS 
+        RSS -> residual sum of squares         #residual -> error
+            (actual y1 - predicted y1)**2 + (actual y2 - predicted y2)**2 + .....
+        TSS -> total sum of squares
+            (y1 - mean)**2 + (y2 - mean)**2 + .....
+            mean = (y1 + y1 + .....) / num of Y
+
+    MSE : (mean square error)
+    MAE : (mean absolute error)
+    RMSE: (root mean square error)
 
