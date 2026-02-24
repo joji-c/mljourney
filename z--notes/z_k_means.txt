@@ -1,0 +1,70 @@
+-> unsupervised machine learning:
+    here we dont have a output but group data based on similar behaviour 
+    -> k means:
+        here we give the number of clusters(flags) that the data should be grouped into clusters
+        these flags are centroids that pull similar type nearby data to it 
+        and we keep changing the number of flags and its location until we get a better grouping
+        -> step1: set number of clusters (eg:- k=3)
+        -> step2: randomly select k centeroid
+        -> step3: calculate the distance between each data point and k centeroid
+        -> step4: assign data points to the nearest cluster
+        -> step5: WCSS(within cluster sum of squre)
+            distance btw cluster and point 1 = d1
+            wcss(cluster1) = d1^2 + d2^2 + .....
+        -> step6: continue this process until each centroid has the min wcss
+    the similarity btw 2 points within a (intra)cluster should be max 
+    the similarity btw 2 points of diff (inter)cluster should be min 
+
+eg:- x1 = 1,2,2,3,4,5
+     x2 = 1,1,3,2,3,5
+
+k=2
+select 2 random cluster -> (2,1)  and  (2,3)
+points |dist with (2,1)|dsit with (2,3)|cluster|              we use euclidian distance forlmulla to calc the distance 
+a(1,1) |      1        |       2.23    |   c1  |
+a(2,1) |      0        |        2      |   c1  |
+a(2,3) |      2        |        0      |   c2  |
+a(3,2) |     1.41      |       1.41    |   c1  |
+a(4,3) |     2.82      |        2      |   c2  |
+a(5,5) |      5        |       3.46    |   c2  |
+c1=(a1,a2,a4)
+c2=(a3,a5,a6)
+
+new centroid -> c1=[(1,1)+(2,1)+(3,2)]/3 
+                c2=[(2,3)+(4,3)+(5,5)]/3 
+c1 -> x= 6/3 = 2
+      y= 4/3 = 1.33
+c2 -> x= 11/3 = 3.67
+      y= 11/3 = 3.67
+c1(2,1.33) and c2(3.67,3.67)
+
+points |dist with (2,1.33)|dsit with (3.67,3.67)|cluster|   
+a(1,1) |      1.05        |        3.77         |   c1  |
+a(2,1) |      0.33        |        3.14         |   c1  |
+a(2,3) |      1.67        |        1.79         |   c1  |
+a(3,2) |      1.20        |        1.79         |   c1  |
+a(4,3) |      2.60        |        0.075        |   c2  |
+a(5,5) |      4.74        |        1.88         |   c2  |
+c1=(a1,a2,a3,a4)
+c2=(a4,a5)
+
+new centroid -> c1=[(1,1)+(2,1)+(2,3)+(3,2)]/4
+                c2=[(4,3)+(5,5)]/2
+c1 -> x= 8/4 = 2
+      y= 7/4 = 1.75
+c2 -> x= 9/2 = 4.5
+      y= 8/2 = 4
+c1(2,1.75) and c2(4.5,4)
+
+points |dist with (2,1.75)|dsit with (4.5,4) |cluster|   
+a(1,1) |      1.25        |        4.61      |   c1  |
+a(2,1) |      0.75        |        3.91      |   c1  |
+a(2,3) |      1.25        |        2.69      |   c1  |
+a(3,2) |      1.03        |        2.52      |   c1  |
+a(4,3) |      2.35        |        1.12      |   c2  |
+a(5,5) |      4.42        |        1.12      |   c2  |
+c1=(a1,a2,a3,a4)
+c2=(a4,a5)
+
+we can stop repeating now that the prvous rwo clusters were the same
+
