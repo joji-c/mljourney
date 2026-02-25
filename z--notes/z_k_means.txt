@@ -68,3 +68,26 @@ c2=(a4,a5)
 
 we can stop repeating now that the prvous rwo clusters were the same
 
+-> elbow method: used to decide the number of clusters, here we calc the wcss as y and 1,2,3... as x and from which point a steady bend 
+      occurs is taken as the perfect number of clusters for that dataset
+
+-> how to get wcss in python:
+      from sklearn.cluster import KMeans
+      wcss=[]
+      for i in range(1,11):
+      km=KMeans(random_state=1,n_clusters=i)
+      km.fit(x)
+      wcss.append(km.inertia_)
+      print(wcss)
+here .inertia_ is used to calculate wcss
+
+-> to get a silhouette_score:
+      #value should be greater than 0.5 - 1.0
+      from sklearn.metrics import silhouette_score 
+      print("silhouette_score : ",silhouette_score(x,y)) 
+
+silhouette_score forlmulla:
+      Si = (Bi - Ai) / max(Ai,Bi)
+      Ai=avg of all data points from flag within a cluster
+      Bi=avg of all data points from a flag of another cluster
+
