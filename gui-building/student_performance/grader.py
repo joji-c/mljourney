@@ -1,8 +1,8 @@
 import streamlit as st
 import joblib
 st.title(":red[Grade Prediction]")
-model = joblib.load("C:\\Users\\libin_urv2w13\\Desktop\\mljourney\\Supervised-ML\\Classification\\Feature-Engineering\\grade-prediction\\dt_model.pkl")
-scaler = joblib.load("C:\\Users\\libin_urv2w13\\Desktop\\mljourney\\Supervised-ML\\Classification\\Feature-Engineering\\grade-prediction\\scaler.pkl")
+model = joblib.load("C:\\\\Users\\jojic\\OneDrive\\Desktop\\mljourney\\gui-building\\student_performance\\dt_model.pkl")
+scaler = joblib.load("C:\\Users\\jojic\\OneDrive\\Desktop\\mljourney\\gui-building\\student_performance\\scaler.pkl")
 StudyTimeWeekly = st.number_input("enter studytime")
 Absences = st.number_input("enter absences")
 Tutoring = st.number_input("enter tutoring")
