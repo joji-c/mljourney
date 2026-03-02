@@ -25,6 +25,6 @@ from sklearn.preprocessing import StandardScaler(uses mean and standard deviatio
 and we should create an object for the class StandardScaler
 then    ->  scaler=StandardScaler()
             X_train=scaler.fit_transform(X_train)
-            X_test=scaler.fit_transform(X_test)
+            X_test=scaler.transform(X_test)
             X_train
 
