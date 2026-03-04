@@ -1,0 +1,19 @@
+NLP : natural language processing
+natural - human language, language - text / words, processing - mathematical computation
+its a feild of ai that enable machine to  read, understand, interpret and generate the human language
+we should never change the order of a sentence when doing preprocessing
+
+step 1: text representation :
+    - lowercasing: convert all text into lower case 
+    - remove the noise: removing punctuations, special characters, unwanted numbers
+    - tokenization: convert each word into a token and add it into a list (sentence to words/tokens)
+    - stopword removal: remove unwanted tokens like is, in, and, the... etc. from the token list to make the mathematical computation more easy
+    - stemming/lemmatization: here we change word to its root form by removing tenses and supporters in it
+        eg:- running -> run, largest -> large, goes - > go ......etc
+
+step 2: feature extraction :
+    - TF
+    - IDF
+
+step 3: model selection :
+step 4: model evaluation :
