@@ -11,9 +11,35 @@ step 1: text representation :
     - stemming/lemmatization: here we change word to its root form by removing tenses and supporters in it
         eg:- running -> run, largest -> large, goes - > go ......etc
 
-step 2: feature extraction :
-    - TF
-    - IDF
-
+step 2: feature extraction : TF, IDF
 step 3: model selection :
 step 4: model evaluation :
+
+uses of NLP:
+Sentimental analysis: Checking reviews and categorizing it as positive or negative
+
+s1: "Earth is the third planet from the sun"
+s2: "jupyter is the largest planet"
+these sentences combined can be called a document
+
+term_frequency = no. of times that token appears/total number of words in sentence
+IDF(Inverse Document Frequency) = log(total sentences/no. of times document containing that token)
+
+(log2(1)=0 power of 2 is 0 to get 1)
+Unique Tokens  Term Frequency(s1)   Term Frequency(s2)   IDF          s1(TF*IDF)         s2(TF*IDF)
+=====================================================================================================
+Earth              1/8                  0                log(2/1)       0.0375              0
+is                 1/8                  1/5              log(2/2)       0                   0
+the                2/8                  1/5              log(2/3)      -0.025              -0.02
+third              1/8                  0                log(2/1)       0.0375              0
+planet             1/8                  1/5              log(2/2)       0                   0
+from               1/8                  0                log(2/1)       0.0375              0
+sun                1/8                  0                log(2/1)       0.0375              0
+jupyter            0                    1/5              log(2/1)       0                   0.06
+largest            0                    1/5              log(2/1)       0                   0.06
+
+s1 = [0.0375,0,-0.025,0.0375....]
+s2 = [0,0....]
+TF*IDF converts the sentence into numbers so ML algorithms can understand and process the given text
+processes - finding similarities to gropu similar documents, to retireve infromation from another source(chatgpt)
+
