@@ -10,10 +10,11 @@ step 1: text representation :
     - stopword removal: remove unwanted tokens like is, in, and, the... etc. from the token list to make the mathematical computation more easy
     - stemming/lemmatization: here we change word to its root form by removing tenses and supporters in it
         eg:- running -> run, largest -> large, goes - > go ......etc
-
+        in stemming the ending of the word is cut, caughts -> caught
+        in lemmatization it changes the word entirely, caught -> catch 
 step 2: feature extraction : TF, IDF
-step 3: model selection :
-step 4: model evaluation :
+step 3: model selection
+step 4: model evaluation 
 
 uses of NLP:
 Sentimental analysis: Checking reviews and categorizing it as positive or negative
