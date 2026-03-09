@@ -20,3 +20,4 @@ if st.button("Predict Drug Type"):
     result = model.predict(scaler.transform(test_data))[0]
     grade_map = { 0:'DrugY', 1:'DrugC', 2:'DrugX', 3:'DrugA', 4:'DrugB'}
     st.success(f"Drug Type : {grade_map[result]}")
+
