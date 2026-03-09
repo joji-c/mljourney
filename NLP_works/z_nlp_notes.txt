@@ -12,7 +12,8 @@ step 1: text representation :
         eg:- running -> run, largest -> large, goes - > go ......etc
         in stemming the ending of the word is cut, caughts -> caught
         in lemmatization it changes the word entirely, caught -> catch 
-step 2: feature extraction : TF, IDF
+step 2: feature extraction (vectorization):
+    TFIDF(term Frequency inverse document frequency)
 step 3: model selection
 step 4: model evaluation 
 
@@ -43,4 +44,34 @@ s1 = [0.0375,0,-0.025,0.0375....]
 s2 = [0,0....]
 TF*IDF converts the sentence into numbers so ML algorithms can understand and process the given text
 processes - finding similarities to gropu similar documents, to retireve infromation from another source(chatgpt)
+
+nltk -> natural language toolkit
+nltk.download("stopwords")
+-> regular expression(re): used to find matching pattern. eg:-emails,id's etc
+
+regular expression(re):
+-> findall():
+    import re
+    text="it is raining in spain"
+    print(len(re.findall("in",text)))  # here we get the number of times in is repeated in this string
+
+-> sub():
+    re.sub("in","at",text)  #this will replace all in in text with at
+
+in re : ^ to negate, % to end 
+-> to find stopwords:
+    from nltk.corpus import stopwords
+    sw=stopwords.words("english)
+
+sentence="the# jupyter$ is@ the second@ largest@@ planet"
+sentence=re.sub("[^a-zA-Z0-9 ]","",sentence)
+tokens=nltk.word_tokenize(sentence)
+filtered_tokens=[t for t in tokens if t not in sw]
+filtered_sentence=" ".join(filtered_tokens)
+print(filtered_sentence)
+
+-> to use ngrams:
+    from nltk.util import ngrams
+    grams=ngrams(sequence=filtered_tokens,n=2)
+    tokens=list(grams)
 
