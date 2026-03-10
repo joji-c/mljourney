@@ -1,0 +1,30 @@
+nltk -> natural language toolkit
+nltk.download("stopwords")
+-> regular expression(re): used to find matching pattern. eg:-emails,id's etc
+
+regular expression(re):
+-> findall():
+    import re
+    text="it is raining in spain"
+    print(len(re.findall("in",text)))  # here we get the number of times in is repeated in this string
+
+-> sub():
+    re.sub("in","at",text)  #this will replace all in in text with at
+
+in re : ^ to negate, % to end 
+-> to find stopwords:
+    from nltk.corpus import stopwords
+    sw=stopwords.words("english)
+
+sentence="the# jupyter$ is@ the second@ largest@@ planet"
+sentence=re.sub("[^a-zA-Z0-9 ]","",sentence)
+tokens=nltk.word_tokenize(sentence)
+filtered_tokens=[t for t in tokens if t not in sw]
+filtered_sentence=" ".join(filtered_tokens)
+print(filtered_sentence)
+
+-> to use ngrams:
+    from nltk.util import ngrams
+    grams=ngrams(sequence=filtered_tokens,n=2)
+    tokens=list(grams)
+
