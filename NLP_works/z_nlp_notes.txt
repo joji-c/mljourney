@@ -40,10 +40,13 @@ sun                1/8                  0                log(2/1)       0.0375  
 jupyter            0                    1/5              log(2/1)       0                   0.06
 largest            0                    1/5              log(2/1)       0                   0.06
 
-s1 = [0.0375,0,-0.025,0.0375....]
-s2 = [0,0....]
+s1 = [0.0375,0,-0.025,0.0375,0,0.0375,0.0375,0,0]
+s2 = [0,0,-0.02,0,0,0,0,0.06,0.06]
 TF*IDF converts the sentence into numbers so ML algorithms can understand and process the given text
 processes - finding similarities to gropu similar documents, to retireve infromation from another source(chatgpt)
 
-
+-> cosine similarity: (if 2 sentence similar then 1, else -1)
+    cos(0) -> (a*b)            -> dot product of vectors a and b
+        -----------------
+         (||a|| * ||b||)       -> product of magnitude of two vectors
 
