@@ -1,0 +1,20 @@
+aws is a cloud computing platform provides cloud resourses and internet, servers, storage, netw equipment, for rent 
+due to limited ram, storage , collaboration diffic processing becomes slow
+we pay aws for the time we use the required resourses
+
+data collection
+storage(s3)
+data processing(ec2)
+model training(sagemaker)
+model devolepment(api)
+
+gb < tb < peta < exabyte
+
+bigdata: 
+    volume - huge amount of data
+    velocity - speed at which data is generated or transfered
+    variety - diff types of data
+    veracity - data quality and reliability
+    value - backup
+should be easily handled by server
+
