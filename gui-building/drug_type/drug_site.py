@@ -18,6 +18,6 @@ if st.button("Predict Drug Type"):
     chol_map = {"High":0, "Normal":1}
     test_data = [[Age,gender_map[Gender],bp_map[Bp],chol_map[Cholestrol],Na]]
     result = model.predict(scaler.transform(test_data))[0]
-    grade_map = { 0:'DrugY', 1:'DrugC', 2:'DrugX', 3:'DrugA', 4:'DrugB'}
+    grade_map = { 0:'DrugY', 1:'DrugA', 2:'DrugB', 3:'DrugC', 4:'DrugX'}
     st.success(f"Drug Type : {grade_map[result]}")
 
